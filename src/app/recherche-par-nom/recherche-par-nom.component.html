@@ -1,0 +1,24 @@
+<div class="container">
+    <form class="form-inline">
+        <div class="form-group mx-sm-3 mb-2 mt-2 ">
+        <label>Nom Enseignant en tapant</label>
+        <input class="form-control" #searchTerm (keyup)="onKeyUp(searchTerm.value)">
+        </div>
+    </form>
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <table class="table table-striped">
+    <thead>
+    <tr> <th>Id</th><th>Nom</th> <th>Matiere</th> </tr>
+    </thead>
+    <tbody *ngFor="let produit of produits">
+        <tr>
+            <td>{{produit.idEnseignant}}</td>
+            <td>{{produit.nomEnseignant}}</td>
+            <td>{{produit.matiere?.nomMat}}</td>
+            </tr>
+            </tbody>
+            </table>
+            </div>
+            </div>
+            </div>

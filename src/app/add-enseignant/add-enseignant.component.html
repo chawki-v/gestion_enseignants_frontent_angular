@@ -1,0 +1,36 @@
+<div class="container">
+    <div>
+    <h2>Ajouter un Enseignant :</h2>
+    </div>
+
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >ID Enseignant</label>
+        <input type="text" [(ngModel)]="newEnseignant.idEnseignant"
+        name="idEnseignant" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Nom Enseignant</label>
+        <input type="text"[(ngModel)]= "newEnseignant.nomEnseignant"
+        name="nomEnseignant" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Matiere</label>
+            <select class="form-control form-control-lg" id="idMat" name="idMat"
+            [(ngModel)]="newIdMat">
+             <option *ngFor="let cat of matiere" [value]="cat.idMat" >
+             {{cat.nomMat}}
+            </option>
+        </select>
+    </div>
+        <div class="mt-2">
+        <button type="submit" (click)="addEnseignant()"class="btn btn-success">Ajouter</button>
+        <div>
+            <h3>
+                {{message}}
+            </h3>
+        </div>
+        </div>
+        </form>
+        </div>
+        
